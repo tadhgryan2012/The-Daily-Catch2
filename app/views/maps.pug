@@ -1,0 +1,12 @@
+extends layout.pug
+
+block head
+  script(async defer, src=`https://maps.googleapis.com/maps/api/js?key=${googleApiKey}&libraries=places&loading=async&callback=initMap`)
+
+block content
+  .position-absolute.top-0.start-10.m-3.p-2.bg-white.shadow.rounded.z-3
+    input#searchBox.form-control(type="text", placeholder="Search for a place")
+
+  #map.w-100.h-100.position-relative
+
+  script(src="/javascripts/maps.js")
