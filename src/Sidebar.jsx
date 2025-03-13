@@ -22,7 +22,7 @@ const Sidebar = () => {
       <div className="text-center mb-3">
         <img
           className="logo img-fluid"
-          src={"/logo.png"}
+          src={"./logo.png"}
           alt="Logo"
           style={{
             width: expanded ? "64px" : "45px",
