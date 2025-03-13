@@ -34,10 +34,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Use Secret in an Environment Variable
-        run: echo "Your API key is ${{secrets.VITE_GOOGLE_API_KEY}}"  
-        env:
-          VITE_GOOGLE_API_KEY: ${{secrets.VITE_GOOGLE_API_KEY}}
+      - name: Environment Variables
+        run: echo "VITE_GOOGLE_API_KEY=${{secrets.VITE_GOOGLE_API_KEY}}"  > .env
 
       - name: Build with Node.js
         run: npm run build
